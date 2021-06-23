@@ -1,10 +1,7 @@
 import React from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import {
-  View,
-  Image
-} from 'react-native';
+import { Image } from 'react-native';
 
 import { styles } from './styles'
 import { theme } from '../../globals/styles/theme';
