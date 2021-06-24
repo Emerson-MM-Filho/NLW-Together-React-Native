@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+
 import { View, FlatList, Text } from 'react-native';
-import { Appointment } from '../../components/Appointment';
-import { ButtonAdd } from '../../components/ButtonAdd';
-import { CategorySelect } from '../../components/CategorySelect';
-import { ListHeader } from '../../components/ListHeader';
+import { useNavigation } from '@react-navigation/native'
+
 import { Profile } from '../../components/Profile';
-import { ListDivider } from '../../components/ListDivider';
+import { ButtonAdd } from '../../components/ButtonAdd';
 import { Background } from '../../components/Background';
+import { ListHeader } from '../../components/ListHeader';
+import { ListDivider } from '../../components/ListDivider';
+import { Appointment } from '../../components/Appointment';
+import { CategorySelect } from '../../components/CategorySelect';
 
 import { styles } from './styles'
 
@@ -49,18 +52,65 @@ export function Home() {
       category: '1',
       date: '22/06 às 20:40h',
       description: 'É hoje que vamos chegar ao challender sem perder uma partida da md10'
+    },
+    {
+      id: '4',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: true,
+      },
+      category: '1',
+      date: '22/06 às 20:40h',
+      description: 'É hoje que vamos chegar ao challender sem perder uma partida da md10'
+    },
+    {
+      id: '5',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: true,
+      },
+      category: '1',
+      date: '22/06 às 20:40h',
+      description: 'É hoje que vamos chegar ao challender sem perder uma partida da md10'
+    },
+    {
+      id: '6',
+      guild: {
+        id: '1',
+        name: 'Lendários',
+        icon: null,
+        owner: true,
+      },
+      category: '1',
+      date: '22/06 às 20:40h',
+      description: 'É hoje que vamos chegar ao challender sem perder uma partida da md10'
     }
   ]
+
+  const navigation = useNavigation()
 
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }
 
+  function handleAppointmentDetails() {
+    navigation.navigate('AppointmentDetails')
+  }
+
+  function handleAppointmentCreate() {
+    navigation.navigate('AppointmentCreate')
+  }
+
+
   return (
     <Background>
       <View style={styles.header}>
-        <Profile />
-        <ButtonAdd />
+        <Profile/>
+        <ButtonAdd onPress={handleAppointmentCreate} />
       </View>
 
       <CategorySelect
@@ -75,7 +125,10 @@ export function Home() {
           data={appointments}
           keyExtractor={item => item.id}
           renderItem={({ item }) => (
-            <Appointment data={item}/>
+            <Appointment 
+              data={item}
+              onPress={handleAppointmentDetails}
+            />
           )}
           ItemSeparatorComponent = {() => <ListDivider />}
           style={styles.matches}
