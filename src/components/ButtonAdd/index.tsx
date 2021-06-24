@@ -11,6 +11,7 @@ export function ButtonAdd({...rest}: RectButtonProps) {
   return (
     <RectButton 
       style={styles.container}
+      {...rest}
     >
       <MaterialCommunityIcons 
         name='plus'
