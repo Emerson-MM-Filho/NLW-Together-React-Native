@@ -23,18 +23,6 @@ export function Guilds({ handleGuildSelect }: Props) {
       name: 'Galera do Game',
       icon: 'image.png',
       owner: true,
-    },
-    {
-      id:'3',
-      name: 'Valorant comédia',
-      icon: 'image.png',
-      owner: true,
-    },
-    {
-      id:'4',
-      name: 'Battlefield 2042 é o que há',
-      icon: 'image.png',
-      owner: true,
     }
   ]
 
@@ -49,7 +37,9 @@ export function Guilds({ handleGuildSelect }: Props) {
             onPress={() => handleGuildSelect(item)}
           />
         )}
-        ItemSeparatorComponent={() => <ListDivider />}
+        ItemSeparatorComponent={() => <ListDivider isCentered />}
+        ListHeaderComponent={() => <ListDivider isCentered />}
+        contentContainerStyle={{ paddingBottom: 68, paddingTop: 104 }}
         showsVerticalScrollIndicator={false}
         style={styles.guilds}
       />
