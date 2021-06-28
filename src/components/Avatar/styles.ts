@@ -2,15 +2,15 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
-    width: 50,
-    height: 50,
-    borderRadius: 8,
+    height: 64, 
+    width: 64,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 22,
+    marginRight: 20,
+    borderRadius: 8,
   }, avatar: {
-    width: 45,
-    height: 45,
+    width:62,
+    height: 62,
     borderRadius: 8,
   }
 })
