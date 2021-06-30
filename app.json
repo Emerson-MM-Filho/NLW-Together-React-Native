@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "nlw_together",
-    "slug": "nlw_together",
+    "name": "nlwtogether",
+    "slug": "nlwtogether",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "nlwtogether",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
