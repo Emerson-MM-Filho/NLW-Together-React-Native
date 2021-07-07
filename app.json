@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "nlwtogether",
+    "name": "NlwTogether",
     "slug": "nlwtogether",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -18,9 +18,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.emersonfilho.nlwtogether"
     },
     "android": {
+      "package": "com.emersonfilho.nlwtogether",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
