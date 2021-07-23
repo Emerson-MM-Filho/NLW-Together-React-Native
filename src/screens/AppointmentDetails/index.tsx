@@ -49,7 +49,6 @@ export function AppointmentDetails() {
   async function fetchGuildWidget() {
     try {
       const response = await api.get(`/guilds/${guildSelected.guild.id}/widget.json`)
-      console.log(response)
       setWidget(response.data)
     } catch {
       Alert.alert('Verifique as configurações de widget do servidor.')
